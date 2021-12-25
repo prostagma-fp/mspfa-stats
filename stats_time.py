@@ -79,7 +79,7 @@ for filename in glob.glob("*.txt"):
                 if page["n"] != [] and page["n"][0] == 2: # Most used words of the first pages
                     for word in words:
                         word = re.sub(r"[^\w]", "", word)
-                        if word == "he" or (len(word) >= 3 and len(word) < 27):
+                        if word == "he" or word == "do" or (len(word) >= 3 and len(word) < 27):
                             if not word in unique_words_first: unique_words_first[word] = 0
                             unique_words_first[word] += 1
                 else: # Most used word of other pages
